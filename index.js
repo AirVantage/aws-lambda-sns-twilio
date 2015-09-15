@@ -24,7 +24,7 @@ exports.handler = function(event, context) {
         if ("arn:aws:sns:EXAMPLE" === record.Sns.TopicArn) {
             sendSMS(record.Sns.Subject, context);
         } else {
-            console.log("record ignored");
+            console.log("Record ignored");
             context.done(null, null);
         }
     });
